@@ -1,0 +1,2562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>scrapingandgenerate</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>numerosubs</name>
+            <default_value>6</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>urlpeti</name>
+            <default_value>https&#x3a;&#x2f;&#x2f;www.ejemplopagina.net&#x2f;s&#x2f;catalogo&#x2f;subastas&#x3f;identificadorvendedor&#x3d;art84gallery&#x26;O&#x3d;sr</default_value>
+            <description/>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2023&#x2f;08&#x2f;29 06&#x3a;19&#x3a;34.773</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2023&#x2f;08&#x2f;29 06&#x3a;19&#x3a;34.773</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+  <hop> <from>A&#xf1;adir constantes</from><to>StdDev</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generar Filas</from><to>Juntar Filas &#x28;producto cartesiano&#x29;</to><enabled>N</enabled> </hop>
+  <hop> <from>Get Variables</from><to>Juntar Filas &#x28;producto cartesiano&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>scraperimagentitulo</from><to>Salida Fichero de Texto 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>crearpaginaweb</from><to>Salida Fichero de Texto 2 2</to><enabled>N</enabled> </hop>
+  <hop> <from>Juntar Filas &#x28;producto cartesiano&#x29;</from><to>Salida Fichero de Texto</to><enabled>Y</enabled> </hop>
+  <hop> <from>LT Kronoberg 2 2 2</from><to>A&#xf1;adir constantes</to><enabled>Y</enabled> </hop>
+  <hop> <from>StdDev</from><to>Juntar Filas &#x28;producto cartesiano&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Salida Fichero de Texto</from><to>Selecciona&#x2f;Renombra valores</to><enabled>Y</enabled> </hop>
+  <hop> <from>Selecciona&#x2f;Renombra valores</from><to>scraperimagentitulo</to><enabled>Y</enabled> </hop>
+  <hop> <from>scraperimagentitulo</from><to>Selecciona&#x2f;Renombra valores 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generar Filas 2 2 2</from><to>Juntar Filas &#x28;producto cartesiano&#x29; 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Selecciona&#x2f;Renombra valores 2</from><to>Juntar Filas &#x28;producto cartesiano&#x29; 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Juntar Filas &#x28;producto cartesiano&#x29; 3</from><to>REST Client 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>REST Client 2 2</from><to>A&#xf1;adir constantes 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>A&#xf1;adir constantes 2 2</from><to>StdDev 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Salida Fichero de Texto 2</from><to>crearpaginaweb</to><enabled>N</enabled> </hop>
+  <hop> <from>Selecciona&#x2f;Renombra valores 2 2</from><to>scraperfechayenlaces</to><enabled>Y</enabled> </hop>
+  <hop> <from>StdDev 2 2</from><to>Salida Fichero de Texto 2 2 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Salida Fichero de Texto 2 2 2 2</from><to>Selecciona&#x2f;Renombra valores 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Selecciona&#x2f;Renombra valores 3</from><to>crearpaginaweb</to><enabled>Y</enabled> </hop>
+  <hop> <from>crearpaginaweb</from><to>Salida Fichero de Texto 2 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>crearpaginaweb</from><to>Copia filas a resultado</to><enabled>Y</enabled> </hop>
+  <hop> <from>Salida Fichero de Texto 2</from><to>Uni&#xfffd;n por Clave</to><enabled>Y</enabled> </hop>
+  <hop> <from>Uni&#xfffd;n por Clave</from><to>Selecciona&#x2f;Renombra valores 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>scraperfechayenlaces</from><to>Salida Fichero de Texto 2 2 3 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Salida Fichero de Texto 2 2 3 2</from><to>Uni&#xfffd;n por Clave</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>A&#xf1;adir constantes</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>separador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>d</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>284</xloc>
+      <yloc>123</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>A&#xf1;adir constantes 2 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>separador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>d</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>630</xloc>
+      <yloc>491</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Copia filas a resultado</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>969</xloc>
+      <yloc>307</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Generar Filas</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>numeroasac</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#x24;&#x7b;numerosubs&#x7d;</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>285</xloc>
+      <yloc>203</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Generar Filas 2 2 2</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>user-agent</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>Mozilla&#x2f;5.0 &#x28;Windows NT 10.0&#x3b; Win64&#x3b; x64&#x29; AppleWebKit&#x2f;537.36 &#x28;KHTML, like Gecko&#x29; Chrome&#x2f;91.0.4472.124 Safari&#x2f;537.36 Edg&#x2f;91.0.864.59</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>accept-encoding</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>gzip, deflate, br</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>accept</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>text&#x2f;html,application&#x2f;xhtml&#x2b;xml,application&#x2f;xml&#x3b;q&#x3d;0.9,image&#x2f;webp,&#x2f;&#x3b;q&#x3d;0.8</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>464</xloc>
+      <yloc>433</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Variables</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>numeroasacar</name>
+        <variable>&#x24;&#x7b;numerosubs&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>234</xloc>
+      <yloc>296</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Juntar Filas &#x28;producto cartesiano&#x29;</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>425</xloc>
+      <yloc>162</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Juntar Filas &#x28;producto cartesiano&#x29; 3</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>541</xloc>
+      <yloc>335</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LT Kronoberg 2 2 2</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>N</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>mixed</format>
+    <encoding>UTF-8</encoding>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#x24;&#x7b;urlpeti&#x7d;</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>Fixed</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>html</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>0</position>
+        <length>2000</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>sv_SE</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>79</xloc>
+      <yloc>123</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>REST Client 2 2</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <applicationType>TEXT PLAIN</applicationType>
+    <method>GET</method>
+    <url/>
+    <urlInField>Y</urlInField>
+    <dynamicMethod>N</dynamicMethod>
+    <methodFieldName/>
+    <urlField>enlacesub</urlField>
+    <bodyField/>
+    <httpLogin/>
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost/>
+    <proxyPort/>
+    <preemptive>N</preemptive>
+    <trustStoreFile>C&#x3a;&#x5c;jdk1.8.0_152&#x5c;jre&#x5c;lib&#x5c;security&#x5c;cacerts</trustStoreFile>
+    <trustStorePassword>Encrypted 2be98afc86aa7f2e4a811af7ed997a6ce</trustStorePassword>
+    <headers>
+      <header>
+        <field>user-agent</field>
+        <name>user-agent</name>
+        </header>
+      <header>
+        <field>accept</field>
+        <name>accept</name>
+        </header>
+      </headers>
+    <parameters>
+      </parameters>
+    <result>
+      <name>htmlu</name>
+      <code/>
+      <response_time/>
+      </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>627</xloc>
+      <yloc>329</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;feiojd.html</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>concatenado</name>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>342</xloc>
+      <yloc>312</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;sentinel</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>sabastasdetodo</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>urlimagen</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>titulo</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>precio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>enlacesub</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>numeropujas</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>tiempodepuja</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>identiflote</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>enlacesegui</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>606</xloc>
+      <yloc>77</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto 2 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;trabajocuadros&#x5c;mujik.html</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>concaurl</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>999</xloc>
+      <yloc>173</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto 2 2 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;trabajocuadros&#x5c;murg.html</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>concaurl</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>878</xloc>
+      <yloc>371</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto 2 2 2 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;lolomoj.txt</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>separador</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>salto2</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>708</xloc>
+      <yloc>303</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Salida Fichero de Texto 2 2 3 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;daniel&#x5c;Desktop&#x5c;trabajocuadros&#x5c;trabajocuadros&#x5c;soids.txt</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>fechafinal</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>enlacesg</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>701</xloc>
+      <yloc>203</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Selecciona&#x2f;Renombra valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>separador</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>concatenado</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>numeroasacar</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>417</xloc>
+      <yloc>251</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Selecciona&#x2f;Renombra valores 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>enlacesub</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>447</xloc>
+      <yloc>343</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Selecciona&#x2f;Renombra valores 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>separador</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>salto2</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>enlacesub</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>632</xloc>
+      <yloc>263</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Selecciona&#x2f;Renombra valores 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>sabastasdetodo</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>urlimagen</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>titulo</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>precio</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>enlacesub</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>numeropujas</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>tiempodepuja</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>identiflote</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>enlacesegui</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>fechafinal</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>737</xloc>
+      <yloc>158</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>StdDev</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>separador</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>concatenado</aggregate>
+          <subject>html</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield> &#x24;&#x7b;line.separator&#x7d;</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>409</xloc>
+      <yloc>93</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>StdDev 2 2</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>separador</name>
+        </field>
+        <field>
+          <name>enlacesub</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>salto2</aggregate>
+          <subject>htmlu</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield> &#x24;&#x7b;line.separator&#x7d;</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>754</xloc>
+      <yloc>472</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Uni&#xfffd;n por Clave</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>LEFT OUTER</join_type>
+<step1>Salida Fichero de Texto 2</step1>
+<step2>Salida Fichero de Texto 2 2 3 2</step2>
+    <keys_1>
+      <key>enlacesub</key>
+    </keys_1>
+    <keys_2>
+      <key>enlacesg</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>601</xloc>
+      <yloc>190</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>crearpaginaweb</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+static long rownum = 0;
+static RowMetaInterface inputRowMeta;
+static long numFields;
+static String[] fieldNames;
+
+//
+String sacalo="";
+
+static String alo="";
+
+
+
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+  // get the current row
+  Object[] r = getRow();
+
+  // If the row object is null, we are done processing.
+  
+  // If this is the first row, cache some metadata.
+  // We will reuse this metadata in processing the rest of the rows.
+  if (first) {
+    inputRowMeta = getInputRowMeta();
+    fieldNames = inputRowMeta.getFieldNames();
+    numFields = fieldNames.length; 
+  }
+    Object[] EntraRow = new Object[10];
+  // Generate a new id number for the current row.
+    EntraRow[0] = inputRowMeta.getString(r,0);
+    EntraRow[1] = inputRowMeta.getString(r, 1);
+    EntraRow[2] = inputRowMeta.getString(r, 2);
+    EntraRow[3] = inputRowMeta.getString(r, 3);
+    EntraRow[4] = inputRowMeta.getString(r, 4);
+    EntraRow[5] = inputRowMeta.getString(r, 5);
+    EntraRow[6] = inputRowMeta.getString(r, 6);
+    EntraRow[7] = inputRowMeta.getString(r, 7);
+    EntraRow[8] = inputRowMeta.getString(r, 8);
+    EntraRow[9] = inputRowMeta.getString(r, 9);
+
+
+     String lleca = (String)EntraRow[1];
+
+     /// Document doc = Jsoup.parse((String)EntraRow[1]);
+  int fieldnum;
+
+Date today = new Date();
+SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", new Locale("es", "ES"));
+String formattedDate = sdf.format(today);
+
+///alo=(String)EntraRow[2];
+///alo=alo.toUpperCase() ;
+
+
+
+      //  Elements imagenes = doc.select("a[href],img[src]");
+
+     //   Elements links = doc.select("a[href],img[src]");
+
+//if (imagenes.size()==0){
+//imagenes = doc.select("div a>img");
+//}
+    //public Element  [More ...] child(int index) {
+
+        // return children().get(index);
+
+    Object[] outputRow = new Object[3];
+     /////sacalo=sacalo+(String)EntraRow[1];
+
+    // }
+
+
+          ///// int conatrimagenes=links.size();
+
+
+//for(Element linko : links) {
+   // System.out.println(linko.elementSiblingIndex() + " " + linko.text());
+//}
+
+
+
+
+
+String sacarlote="\n<tr>\n<td style=\"padding-top:15px;padding-bottom:5px;border-top:1px solid gainsboro;vertical-align:top;\">\n<div style=\"background-color: rgb(245, 245, 245);";
+sacarlote=sacarlote+"\nbox-sizing: border-box;";
+sacarlote=sacarlote+"\ncolor: rgb(34, 34, 34);";
+sacarlote=sacarlote+"\ndisplay: block;";
+sacarlote=sacarlote+"\nflex-grow: 0;";
+sacarlote=sacarlote+"\nflex-shrink: 0;";
+sacarlote=sacarlote+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sacarlote=sacarlote+"\nfont-size: 14px;";
+sacarlote=sacarlote+"\nline-height: 20px;";
+sacarlote=sacarlote+"\nmargin-right: 20px;";
+sacarlote=sacarlote+"\ntext-size-adjust: 100%;";
+sacarlote=sacarlote+"\nmax-width:230px;";
+sacarlote=sacarlote+"\nwidth: auto;";
+sacarlote=sacarlote+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+sacarlote=sacarlote+"\n<a href=\""+EntraRow[4]+ "\" style=\"background-color: rgba(0, 0, 0, 0);";
+sacarlote=sacarlote+"\nbox-sizing: border-box;";
+sacarlote=sacarlote+"\ncolor: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\ncursor: pointer;";
+sacarlote=sacarlote+"\ndisplay: inline;";
+sacarlote=sacarlote+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sacarlote=sacarlote+"\nfont-size: 14px;";
+sacarlote=sacarlote+"\nheight: auto;";
+sacarlote=sacarlote+"\nline-height: 20px;";
+sacarlote=sacarlote+"\ntext-decoration-color: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\ntext-decoration-line: none;";
+sacarlote=sacarlote+"\ntext-decoration-style: solid;";
+sacarlote=sacarlote+"\ntext-size-adjust: 100%;";
+sacarlote=sacarlote+"\nwidth: auto;";
+sacarlote=sacarlote+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+sacarlote=sacarlote+"\n<img src=\""+EntraRow[1]+"\" style=\"border-bottom-color: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\nborder-bottom-style: none;";
+sacarlote=sacarlote+"\nborder-bottom-width: 0px;";
+sacarlote=sacarlote+"\nborder-image-outset: 0px;";
+sacarlote=sacarlote+"\nborder-image-repeat: stretch;";
+sacarlote=sacarlote+"\nborder-image-slice: 100%;";
+sacarlote=sacarlote+"\nborder-image-source: none;";
+sacarlote=sacarlote+"\nborder-image-width: 1;";
+sacarlote=sacarlote+"\nborder-left-color: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\nborder-left-style: none;";
+sacarlote=sacarlote+"\nborder-left-width: 0px;";
+sacarlote=sacarlote+"\nborder-right-color: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\nborder-right-style: none;";
+sacarlote=sacarlote+"\nborder-right-width: 0px;";
+sacarlote=sacarlote+"\nborder-top-color: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\nborder-top-style: none;";
+sacarlote=sacarlote+"\nborder-top-width: 0px;";
+sacarlote=sacarlote+"\nbox-sizing: border-box;";
+sacarlote=sacarlote+"\ncolor: rgb(170, 170, 170);";
+sacarlote=sacarlote+"\ncursor: pointer;";
+sacarlote=sacarlote+"\ndisplay: block;";
+sacarlote=sacarlote+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sacarlote=sacarlote+"\nfont-size: 14px;";
+sacarlote=sacarlote+"\nheight: auto;";
+sacarlote=sacarlote+"\nline-height: 20px;";
+sacarlote=sacarlote+"\nmax-width: 100%;";
+sacarlote=sacarlote+"\nopacity: 1;";
+sacarlote=sacarlote+"\noverflow-x: hidden;";
+sacarlote=sacarlote+"\noverflow-y: hidden;";
+sacarlote=sacarlote+"\ntext-size-adjust: 100%;";
+sacarlote=sacarlote+"\ntransition-delay: 0s;";
+sacarlote=sacarlote+"\ntransition-duration: 0.3s;";
+sacarlote=sacarlote+"\ntransition-property: opacity;";
+sacarlote=sacarlote+"\ntransition-timing-function: ease;";
+sacarlote=sacarlote+"\nvertical-align: middle;";
+sacarlote=sacarlote+"\nwidth: auto;";
+sacarlote=sacarlote+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" alt=\""+EntraRow[2]+ "\" title=\""+EntraRow[2]+"\" border=\"0\">";
+
+sacarlote=sacarlote+"\n</a><a href=\""+EntraRow[4]+ "\" title=\"Subasta\" style=\"background-color: rgba(255, 153, 0, 0.85);";
+sacarlote=sacarlote+"\nbottom: 0px;";
+sacarlote=sacarlote+"\nbox-sizing: border-box;";
+sacarlote=sacarlote+"\ncolor: rgb(255, 255, 255);";
+sacarlote=sacarlote+"\ncursor: pointer;";
+sacarlote=sacarlote+"\ndisplay: block;";
+sacarlote=sacarlote+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sacarlote=sacarlote+"\nfont-size: 16px;";
+sacarlote=sacarlote+"\nfont-weight: 400;";
+sacarlote=sacarlote+"\nheight: 42px;";
+////sacarlote=sacarlote+"\nleft: 0px;";
+sacarlote=sacarlote+"\nline-height: 35px;";
+sacarlote=sacarlote+"\ntext-align: center;";
+sacarlote=sacarlote+"\ntext-decoration-color: rgb(255, 255, 255);";
+sacarlote=sacarlote+"\ntext-decoration-line: none;";
+sacarlote=sacarlote+"\ntext-decoration-style: solid;";
+sacarlote=sacarlote+"\ntext-size-adjust: 100%;";
+sacarlote=sacarlote+"\nwhite-space: nowrap;";
+sacarlote=sacarlote+"\nwidth: auto;";
+sacarlote=sacarlote+"\nz-index: 300;";
+sacarlote=sacarlote+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+sacarlote=sacarlote+"\nSubasta";
+sacarlote=sacarlote+"\n</a>";
+sacarlote=sacarlote+"\n</div>";
+sacarlote=sacarlote+"\n</td>";
+sacarlote=sacarlote+"\n<td style=\"padding-top:20px;padding-bottom:5px;border-top:1px solid gainsboro;vertical-align:top;\">";
+sacarlote=sacarlote+"\n<div style=\"max-width:390px;\"> <a href=\""+EntraRow[4]+ "\" style=\"text-decoration:none;color:black;\">"+EntraRow[2]+"</a><br>";
+sacarlote=sacarlote+"\n<span style=\"-moz-box-sizing:border-box;-webkit-box-sizing:border-box;Margin:0;Margin-bottom:10px;";
+sacarlote=sacarlote+"\nbox-sizing:border-box;color:#9d9999;font-family:Helvetica,Arial,sans-serif;";
+sacarlote=sacarlote+"\nfont-size:12px;font-weight:400;line-height:1.3;margin:0 0 10px;margin-bottom:10px;";
+sacarlote=sacarlote+"\npadding:0;text-align:left\">Arte - Pintura - Pintura al Óleo Contemporánea </span>";
+sacarlote=sacarlote+"\n<br> <div style=\"margin-top:10px;\">";
+sacarlote=sacarlote+"\n<strong><span class=\"text-nowrap \" style=\"font-size:26px;\">";
+sacarlote=sacarlote+"\n"+EntraRow[3];
+sacarlote=sacarlote+"\n</span></strong>";
+sacarlote=sacarlote+"\n<span class=\"_lote_item-bids\">";
+sacarlote=sacarlote+"\n"+EntraRow[5];
+sacarlote=sacarlote+"</span>";
+sacarlote=sacarlote+"\n<br>";
+
+
+
+
+
+sacarlote=sacarlote+"\n<span class=\"_lote_item-auctiontime _lote_item-margin-left lote-infosubasta-tiempo reloj\" style=\"display: inline-block; vertical-align: middle;\">";
+sacarlote=sacarlote+"\n<i class=\"icon icon-clock-o\"     >";
+sacarlote=sacarlote+"\n<img src=\"https://cdn-icons-png.flaticon.com/128/10473/10473481.png\" alt=\"Icon\" width=\"16\" height=\"16\">";
+///sacarlote=sacarlote+"\n<img src=\"../relojantiguo.png\" alt=\"Icon\" width=\"16\" height=\"16\">";
+///sacarlote=sacarlote+"\n<img src=\"https://th.bing.com/th/id/R.4cd0c06f434985c1acb5ad260d0ff12f?rik=C7yYBWPQh%2bLqcA&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f7ca%2fLr5%2f7caLr58ei.png&ehk=QoqITlJVMDzQVcegoIP1LvJQn9jBnLRdVd8U7QftGPo%3d&risl=&pid=ImgRaw&r=0\" alt=\"Icon\" width=\"16\" height=\"16\">";
+sacarlote=sacarlote+"\n</i>";
+sacarlote=sacarlote+"\n"+EntraRow[6];
+sacarlote=sacarlote+"\n</span>";
+
+
+
+
+
+
+sacarlote=sacarlote+"\n<span style=\"color:#888;font-family:Helvetica,Arial,sans-serif;";
+sacarlote=sacarlote+"\nfont-size:15px;font-weight:400;line-height:1.3;margin:0 0 0px;margin-bottom:0px;";
+sacarlote=sacarlote+"\npadding:0;text-align:left;vertical-align:middle;\">";
+///sacarlote=sacarlote+"\nFinaliza el";
+///sacarlote=sacarlote+"\n25 de julio de 2023 19:11:00 CEST";
+sacarlote=sacarlote+"\n"+EntraRow[9];
+
+
+sacarlote=sacarlote+"\n</span>";
+sacarlote=sacarlote+"\n</div>";
+sacarlote=sacarlote+"\n<br> <a href=\""+EntraRow[8]+ "\" style=\" border-radius: 5px;";
+sacarlote=sacarlote+"\ndisplay: inline-block;";
+sacarlote=sacarlote+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sacarlote=sacarlote+"\nmargin-bottom: 10px;";
+sacarlote=sacarlote+"\nfont-weight: 400;";
+sacarlote=sacarlote+"\ntext-align: center;";
+sacarlote=sacarlote+"\nwhite-space: nowrap;";
+sacarlote=sacarlote+"\nvertical-align: middle;";
+sacarlote=sacarlote+"\nborder: 1px solid gainsboro;";
+sacarlote=sacarlote+"\npadding: 6px 12px;";
+sacarlote=sacarlote+"\nfont-size: 16px;";
+sacarlote=sacarlote+"\ntext-decoration: none;";
+sacarlote=sacarlote+"\nborder: 1px solid blue;";
+sacarlote=sacarlote+"\ncolor: black;\">";
+sacarlote=sacarlote+"\n<img src=\"https://assets2.ejemplo.online/assets/images/icons/corazon.png?202306260927\" style=\"width:14px;\">";
+sacarlote=sacarlote+"\nSeguir";
+sacarlote=sacarlote+"\n</a> </div>";
+sacarlote=sacarlote+"\n</td>";
+sacarlote=sacarlote+"\n</tr>";
+
+
+
+   //  if(referencia.length()>3){//http://
+
+      //Elements link = links.eq(fieldnum);
+     //Element  padres= link.parent();
+   //  Elements  imagenesasociadas=link.select("img");
+
+     //       Element imagenasociada=  imagenesasociadas.get(0);
+
+
+    //  Element  padres= link.parent();
+
+
+
+ 	//Document doca=padres.ownerDocument();
+    //   Elements imagenos=doca.select("img");
+ // Elements imagenos=padres.select("img");
+
+
+
+    //  Elements imagen = imagenes.eq(fieldnum);
+
+
+            //    }
+    // outputRow[0]=link.outerHtml();
+
+
+    //outputRow[0]=link.attr("abs:href");
+    //outputRow[1]=imagen.attr("abs:src");
+   // outputRow[1]=padres.outerHtml();
+
+
+
+     // }
+  
+
+
+
+
+
+
+
+ 
+      //  for (Element link : links) {
+        // link.attr("abs:href");
+        //}
+
+
+   // putRow(data.outputRowMeta, r);  
+
+if (r != null) {
+sacalo=sacalo+sacarlote;
+//outputRow[0]=sacarlote;
+
+
+}
+
+if (r == null) {
+String sans="";
+sans="<div class=\"r box padding\" id=\"caja_derecha\" style=\"width:52%;min-width:500px;min-height:500px;background:#e6e6e6 none repeat scroll 0 0\">";
+sans=sans+"\n<div class=\"r\" id=\"diseno\" style=\"width:100%\">";
+sans=sans+"\n<script>";
+sans=sans+"\n$( document ).ready(function() {";
+sans=sans+"\ndocument.getElementById('resultado').innerHTML = '<div class=lead style=padding-top:8px;>Buscando usuarios...</div>';";
+sans=sans+"\nvar xhr;";
+sans=sans+"\nif(xhr && xhr.readystate != 4) {";
+sans=sans+"\nxhr.abort();";
+sans=sans+"\n}";
+sans=sans+"\nxhr = $.ajax({";
+sans=sans+"\nurl: '/mail/_cuantos.cfm',";
+sans=sans+"\nsync: false,";
+sans=sans+"\nsuccess: function(data) {";
+sans=sans+"\n$(\"#resultado\").html(data);";
+sans=sans+"\n}";
+sans=sans+"\n});";
+sans=sans+"\n$('#slider').load('/mail/_slider.cfm');";
+sans=sans+"\ndocument.getElementById('slider').style.display='block';";
+sans=sans+"\n});";
+sans=sans+"\n</script>";
+
+
+sans=sans+"\n<title>todocoleccion</title>";
+sans=sans+"\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">";
+sans=sans+"\n<link href=\"https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap\" rel=\"stylesheet\">";
+
+
+sans=sans+"\n<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\" style=\"width: 100%; max-width: 700px; min-width: 350px; border-radius: 5px 5px 0 0; background: #fff; border: thin solid #e6e6e6;\" bgcolor=\"#fff\">";
+sans=sans+"\n<tbody><tr>";
+sans=sans+"\n<td>";
+sans=sans+"\n<table style=\"width: 100%; max-width: 700px; min-width: 350px; border-radius: 5px 5px 0 0; background: #fff; padding: 10px;\" bgcolor=\"#fff\">";
+
+
+sans=sans+"\n<tbody><tr>";
+sans=sans+"\n<td>";
+
+sans=sans+"\n<div>"; 
+////sans=sans+"\n<div style=\"width:auto;\" >"; 
+sans=sans+"\n<div style=\"background-color: rgb(245, 245, 245);";
+////sans=sans+"\nbox-sizing: border-box;";
+////sans=sans+"\ncolor: rgb(34, 34, 34);";
+sans=sans+"\ndisplay: inline-block;";
+///sans=sans+"\nflex-grow: 0;";
+///sans=sans+"\nflex-shrink: 0;";
+///sans=sans+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+///sans=sans+"\nfont-size: 14px;";
+///sans=sans+"\nline-height: 10px;";
+///sans=sans+"\nmargin-right: 0px;";
+///sans=sans+"\ntext-size-adjust: 100%;";
+sans=sans+"\nmax-width:730px;";
+sans=sans+"\nwidth:20%;";
+sans=sans+"\nheight: auto;";
+sans=sans+"\nvertical-align: middle;";
+
+sans=sans+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+sans=sans+"\n<a href=\"https://www.ejemplo.net/usuario/art84gallery\" style=\"background-color: rgba(0, 0, 0, 0);";
+sans=sans+"\nbox-sizing: border-box;";
+sans=sans+"\ncolor: rgb(170, 170, 170);";
+sans=sans+"\ncursor: pointer;";
+sans=sans+"\ndisplay: inline;";
+sans=sans+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+sans=sans+"\nfont-size: 0px;";
+sans=sans+"\nheight: auto;";
+sans=sans+"\nline-height: 0px;";
+sans=sans+"\ntext-decoration-color: rgb(170, 170, 170);";
+sans=sans+"\ntext-decoration-line: none;";
+sans=sans+"\ntext-decoration-style: solid;";
+sans=sans+"\ntext-size-adjust: 100%;";
+sans=sans+"\nwidth:auto;";
+sans=sans+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+sans=sans+"\n<img src=\"https://i.imgur.com/ZJFrtbz.jpg\" style=\"border-bottom-color: rgb(170, 170, 170);";
+///sans=sans+"\nborder-bottom-style: none;";
+///sans=sans+"\nborder-bottom-width: 0px;";
+///sans=sans+"\nborder-image-outset: 0px;";
+///sans=sans+"\nborder-image-repeat: stretch;";
+///sans=sans+"\nborder-image-slice: 0%;";
+///sans=sans+"\nborder-image-source: none;";
+///sans=sans+"\nborder-image-width: 0;";
+///sans=sans+"\nborder-left-color: rgb(170, 170, 170);";
+///sans=sans+"\nborder-left-style: none;";
+///sans=sans+"\nborder-left-width: 0px;";
+///sans=sans+"\nborder-right-color: rgb(170, 170, 170);";
+///sans=sans+"\nborder-right-style: none;";
+///sans=sans+"\nborder-right-width: 0px;";
+///sans=sans+"\nborder-top-color: rgb(170, 170, 170);";
+///sans=sans+"\nborder-top-style: none;";
+///sans=sans+"\nborder-top-width: 0px;";
+///sans=sans+"\nbox-sizing: border-box;";
+///sans=sans+"\ncolor: rgb(170, 170, 170);";
+///sans=sans+"\ncursor: pointer;";
+///sans=sans+"\ndisplay: inline-block;";
+///sans=sans+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+///sans=sans+"\nfont-size: 0px;";
+sans=sans+"\nheight: auto;";
+///sans=sans+"\nline-height: 0px;";
+sans=sans+"\nmax-width: 100%;";
+///sans=sans+"\nopacity: 1;";
+//sans=sans+"\noverflow-x: hidden;";
+///sans=sans+"\noverflow-y: hidden;";
+///sans=sans+"\ntext-size-adjust: 100%;";
+///sans=sans+"\ntransition-delay: 0s;";
+///sans=sans+"\ntransition-duration: 0.3s;";
+///sans=sans+"\ntransition-property: opacity;";
+///sans=sans+"\ntransition-timing-function: ease;";
+sans=sans+"\nvertical-align: middle;";
+sans=sans+"\nwidth:auto;";
+
+sans=sans+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" alt=\"Antiguo cuado óleo sobre tabla medidas de la tabla 41×31 medidas total del cuadro 61×51\" title=\"Antiguo cuado óleo sobre tabla medidas de la tabla 41×31 medidas total del cuadro 61×51\" border=\"0\">";
+sans=sans+"\n</a>";
+
+///sans=sans+"\n<a href=\"https://www.todocoleccion.net/arte-pintura-oleo/antiguo-cuado-oleo-sobre-tabla-medidas-tabla-41-31-medidas-total-cuadro-61-51~x329799728#lote-info-en-subasta\" title=\"Subasta\" style=\"background-color: rgba(255, 153, 0, 0.85);";
+////sans=sans+"\nbottom: 0px;";
+///sans=sans+"\nbox-sizing: border-box;";
+///sans=sans+"\ncolor: rgb(252, 252, 252);";
+///sans=sans+"\ncursor: pointer;";
+///sans=sans+"\ndisplay: block;";///sans=sans+"\nfont-family: Helvetica Neue, Helvetica, Arial, sans-serif;";
+///sans=sans+"\nfont-size: 16px;";
+///sans=sans+"\nfont-weight: 400;";
+///sans=sans+"\nheight: 35px;";
+///sans=sans+"\nleft: 0px;";
+///sans=sans+"\nline-height: 35px;";
+///sans=sans+"\ntext-align: center;";
+///sans=sans+"\ntext-decoration-color: rgb(255, 255, 255);";
+///sans=sans+"\ntext-decoration-line: none;";
+///sans=sans+"\ntext-decoration-style: solid;";
+///sans=sans+"\ntext-size-adjust: 100%;";
+///sans=sans+"\nwhite-space: nowrap;";
+///sans=sans+"\nwidth:auto;";
+///sans=sans+"\nz-index: 300;";
+///sans=sans+"\n-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\">";
+///sans=sans+"\nSubasta";
+///sans=sans+"\n</a>";
+
+
+
+////sans=sans+</td>
+
+sans=sans+"\n</div>";
+///sans=sans+"\n <span  style=\"vertical-align: top; text-align: center;\"> Querido [Name],";
+sans=sans+"\n <div  style=\"display: inline-block; height: auto;  vertical-align: top; width:75%;\">";
+///sans=sans+"\nggggggggggggggggggggggggggggjgggggggggggggggggggggggggggggggggggggggggggggggggggggggg";
+sans=sans+"\n <span  style=\"display: inline-block; float: right; text-align: right;\">";
+///sans=sans+"\n<img src=\"https://cdn-icons-png.flaticon.com/128/10473/10473481.png\" alt=\"Icon\" width=\"16\" height=\"16\">";
+/////sans=sans+"\n"+formattedDate+" Nos complace invitarlo a las nuevas subastas del artista Cristianermo. A continuación encontrará una selección de las pinturas que estarán disponibles para pujar. Haga clic en las imágenes para acceder a la página de subasta y hacer sus ofertas.</span>";
+sans=sans+"\n"+formattedDate+"</span>";
+sans=sans+"\n</div>";
+sans=sans+"\n</div>";
+
+
+
+;
+
+////sans=sans+</td>
+///sans=sans+"\n <span style=\"white-space: pre-line; display: inline-block; vertical-align: middle;\" > Querido [Name],";
+///sans=sans+"\n<img src=\"https://cdn-icons-png.flaticon.com/128/10473/10473481.png\" alt=\"Icon\" width=\"16\" height=\"16\">";
+///sans=sans+"\nNos complace invitarlo a las nuevas subastas del artista Cristianermo. A continuación encontrará una selección de las pinturas que estarán disponibles para pujar. Haga clic en las imágenes para acceder a la página de subasta y hacer sus ofertas.</span>";
+
+
+
+
+
+
+
+////sans=sans+"\n<td>";
+sans=sans+"\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #ddd; margin-top: 10px\">";
+sans=sans+"\n<tbody><tr>";
+sans=sans+"\n<td style=\"vertical-align: bottom; min-width: 190px; padding-right: 10px;\">";
+sans=sans+"\n<a href=\"https://www.ejemplo.net\" style=\"color: #0f7ea4;\">";
+sans=sans+"\n<img width=\"171px\" src=\"https://assets2.ejemplo.online/images_tc/logo_nom_url.png\" border=\"0\" style=\"vertical-align: bottom;\">";
+sans=sans+"\n</a>";
+sans=sans+"\n</td>";
+sans=sans+"\n<td align=\"right\" style=\"vertical-align: bottom; padding-bottom:4px;\">";
+sans=sans+"\n</td>";
+sans=sans+"\n</tr>";
+sans=sans+"\n</tbody></table>";
+sans=sans+"\n</td>";
+
+
+sans=sans+"\n</tr>";
+sans=sans+"\n</tbody></table>";
+sans=sans+"\n</td>";
+sans=sans+"\n</tr>";
+sans=sans+"\n<tr>";
+sans=sans+"\n<td style=\"padding: 10px;\">";
+sans=sans+"\n<table align=\"center\" width=\"100%\">";
+sans=sans+"\n<tbody>";
+
+
+
+String finolmail="";
+
+
+
+finolmail=finolmail+"\n</tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-size:12px; margin-top: 30px; margin-bottom: 30px;\" width=\"100%\">";
+finolmail=finolmail+"\n<tbody><tr>";
+finolmail=finolmail+"\n<td width=\"20%\" valign=\"top\" style=\"padding-right: 5px;\" align=\"center\">";
+finolmail=finolmail+"\n<a href=\"https://www.todocoleccion.net/usuario/art84gallery\">";
+finolmail=finolmail+"\n<img src=\"https://cloud10.ejemplo.online/tc/avatares/2018/09/18/avatar_2148996863.jpg\" title=\"Art84gallery\" style=\"max-width: 100%; height: auto;\">";
+finolmail=finolmail+"\n</a>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n<td valign=\"top\">";
+finolmail=finolmail+"\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" style=\"border: 1px solid #ddd;\">";
+finolmail=finolmail+"\n<tbody><tr>";
+finolmail=finolmail+"\n<td style=\"background: #eee; padding:10px; border-bottom: 1px solid #ddd;\">";
+finolmail=finolmail+"\n<strong>art84gallery</strong>";
+finolmail=finolmail+"\n&nbsp;&nbsp;(Albacete, España)";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td style=\"padding:10px; border-bottom: 1px solid #ddd;\">";
+finolmail=finolmail+"\n<a href=\"https://www.ejemplo.net/usuario/valoraciones/art84gallery/vendedor\" style=\"text-decoration:none;color:black;\">";
+finolmail=finolmail+"\n<img src=\"https://assets2.ejemplo.online/images/5estrellas.gif\" border=\"0\" title=\"5 estrellas\" alt=\"5 estrellas\" style=\"vertical-align:text-bottom;\">";
+finolmail=finolmail+"\n&nbsp;&nbsp; 872";
+finolmail=finolmail+"\n</a><br>";
+finolmail=finolmail+"\n<div style=\"color:gray;padding-top:10px;\"> 1.669 lotes en venta</div>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td style=\"padding:10px;\">";
+finolmail=finolmail+"\n<ul style=\"padding-left:12px;color:#0F7EA4;margin:0;\">";
+finolmail=finolmail+"\n<li style=\"margin-bottom:5px;\">";
+finolmail=finolmail+"\n<a style=\"color:#0F7EA4;\" href=\"https://www.ejemplo.net/s/pintura-oleo-contemporanea?identificadorvendedor=Art84gallery\" title=\"Otros lotes de art84gallery en Arte - Pintura - Pintura al Óleo Contemporánea \">";
+finolmail=finolmail+"\nArte - Pintura - Pintura al Óleo Contemporánea";
+finolmail=finolmail+"\n</a>";
+finolmail=finolmail+"\n</li>";
+finolmail=finolmail+"\n<li style=\"margin-bottom:5px;\">";
+finolmail=finolmail+"\n<a style=\"color:#0F7EA4;\" href=\"https://www.ejemplo.net/s/pintura-oleo-contemporanea?identificadorvendedor=Art84gallery\" title=\"Otros lotes de art84gallery en Arte - Pintura - Pintura al Óleo Contemporánea \">";
+finolmail=finolmail+"\nArte - Pintura - Pintura al Óleo Contemporánea";
+finolmail=finolmail+"\n</a>";
+finolmail=finolmail+"\n</li></ul>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr></tbody></table>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n</tbody></table><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"font-size:12px;color:gray;margin-top:20px;\">";
+finolmail=finolmail+"\n<tbody><tr>";
+finolmail=finolmail+"\n<td>";
+finolmail=finolmail+"\n<br>";
+finolmail=finolmail+"\n<a href=\"https://www.todocoleccion.net/servicios/emailmarketing\" style=\"color:gray;\">Emailmarketing</a> de todocoleccion";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n</tbody></table>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td>";
+finolmail=finolmail+"\n<table style=\"background-color: #222222; width: 100%; max-width: 700px; min-width: 350px;\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\">";
+finolmail=finolmail+"\n<tbody><tr>";
+finolmail=finolmail+"\n<td>";
+finolmail=finolmail+"\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\">";
+finolmail=finolmail+"\n<tbody><tr>";
+finolmail=finolmail+"\n<td style=\"text-align:center; padding-top:20px;\">";
+finolmail=finolmail+"\n<a href=\"https://www.facebook.com/todocoleccion\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_facebook.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Síguenos en facebook\" alt=\"Síguenos en facebook\" style=\"vertical-align:middle;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://instagram.com\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_ig.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Síguenos en instagram\" alt=\"Síguenos en instagram\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://www.twitter.com\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_twitter.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Síguenos en twitter\" alt=\"Síguenos en twitter\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://www.pinterest.com\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_pinterest.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Síguenos en pinterest\" alt=\"Síguenos en pinterest\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://www.youtube.com/user\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_youtube.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Síguenos en youtube\" alt=\"Síguenos en youtube\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://www.ejemplon.net/colecciona-recuerdos\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_blog.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Blog Colecciona Recuerdos\" alt=\"Blog Colecciona Recuerdos\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://www.ejemplo.net\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/icon/icon_blog2.png\" width=\"32\" height=\"32\" border=\"0\" title=\"Visita nuestro blog\" alt=\"Visita nuestro blog\" style=\"vertical-align:middle; margin-left:5px;\"></a>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td style=\"text-align:center;padding-bottom: 12px; padding-top: 19px;\">";
+finolmail=finolmail+"\n<a href=\"https://apps.apple.com/es/app/ejemplo/id892347440?pt=1649480&amp;ct=logo-pie&amp;mt=8\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/badge/appstore_es.png\" border=\"0\" title=\"Aplicación para iOS disponible en el App Store\" alt=\"Aplicación para iOS disponible en el App Store\" style=\"vertical-align:middle;\"></a>";
+finolmail=finolmail+"\n<a href=\"https://play.google.com/store/apps/details?id=com.jaraxaejemplo&amp;referrer=utm_source%3Dmail-transaccional%26utm_medium%3Demail%26utm_campaign%3Dlogo-pie\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://assets2.todocoleccion.online/assets/images/emails/footer/badge/googleplay_es.png\" border=\"0\" title=\"Aplicación para Android disponible en Google Play\" alt=\"Aplicación para Android disponible en Google Play\" style=\"vertical-align:middle;\"></a>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td align=\"center\">";
+finolmail=finolmail+"\n<div style=\"max-width: 541px; border-top: 1px solid #666666;\"></div>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td align=\"center\">";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td align=\"center\" style=\"color: #FFFFFF; font-size: 10px; padding-bottom:3px; padding-top:13px; font-family: 'Roboto', sans-serif;\">";
+finolmail=finolmail+"\nEstás registrado en todocoleccion como <a href=\"mailto:xxxxxx@ejemplo.com\" style=\"color: #FFFFFF;text-decoration:none;\">xxxxxx@ejemplo.com</a>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td align=\"center\" style=\"color: #FFFFFF; font-size: 10px; padding-bottom:17px; font-family: 'Roboto', sans-serif;\">";
+finolmail=finolmail+"\nPuedes gestionar tus";
+finolmail=finolmail+"\n<a href=\"https://www.ejemplo.net/mitc/comunicaciones/edit\" style=\"color: #17bdf2;text-decoration:none;\">preferencias</a>";
+finolmail=finolmail+"\n<a href=\"https://www.ejemplo.net/mitc/comunicaciones/edit\" style=\"color: #17bdf2;text-decoration:none;\">cancelar tu suscripción</a>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n</tbody></table>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n</tbody></table>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n<tr>";
+finolmail=finolmail+"\n<td align=\"center\" style=\"background:#e6e6e6;\">";
+finolmail=finolmail+"\n<p style=\"color: #999; font-size: 12px; \">";
+finolmail=finolmail+"\nZoconet, S.L. Avda. ejemplo<a href=\"https://www.ejemplo.net/politica-de-privacidad\" style=\"color: #40B2D4;\">Política de privacidad</a>";
+finolmail=finolmail+"\n</p>";
+finolmail=finolmail+"\n</td>";
+finolmail=finolmail+"\n</tr>";
+finolmail=finolmail+"\n</tbody></table>";
+finolmail=finolmail+"\n&nbsp;";
+finolmail=finolmail+"\n</div>";
+finolmail=finolmail+"\n</div>";
+
+
+
+
+
+
+outputRow[0]=sans+sacalo+finolmail;
+  putRow(data.outputRowMeta, outputRow);
+   setOutputDone();
+    return false;
+  }
+
+
+
+
+///if(conatrlinks==fieldnum){
+ // setOutputDone();
+///}
+  return true;
+}]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>concaurl</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>Y</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>USERNAME</parameter_tag>
+<parameter_value>&#x24;&#x7b;USERNAME&#x7d;</parameter_value>
+<parameter_description>The username of your twitter account</parameter_description>
+</usage_parameter><usage_parameter><parameter_tag>PASSWORD</parameter_tag>
+<parameter_value>&#x24;&#x7b;PASSWORD&#x7d;</parameter_value>
+<parameter_description>The password of your twitter account</parameter_description>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>880</xloc>
+      <yloc>159</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>scraperfechayenlaces</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+static long rownum = 0;
+static RowMetaInterface inputRowMeta;
+static long numFields;
+static String[] fieldNames;
+//
+
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+  // get the current row
+  Object[] r = getRow();
+
+  // If the row object is null, we are done processing.
+  if (r == null) {
+    setOutputDone();
+    return false;
+  }
+
+  // If this is the first row, cache some metadata.
+  // We will reuse this metadata in processing the rest of the rows.
+  if (first) {
+    inputRowMeta = getInputRowMeta();
+    fieldNames = inputRowMeta.getFieldNames();
+    numFields = fieldNames.length; 
+  }
+    Object[] EntraRow = new Object[3];
+  // Generate a new id number for the current row.
+    EntraRow[0] = inputRowMeta.getString(r,0);
+    EntraRow[1] = inputRowMeta.getString(r, 1);
+     EntraRow[2] = inputRowMeta.getString(r, 2);
+      Document doc = Jsoup.parse((String)EntraRow[1]);
+  int fieldnum;
+
+
+ // int foo = Integer.parseInt((String)EntraRow[2]);
+
+
+      //  Elements imagenes = doc.select("a[href],img[src]");
+
+     //   Elements links = doc.select("a[href],img[src]");
+
+      /// Elements links = doc.select("div:has(img)> a");
+       Elements imagenes = doc.select("div:has(a)> img");
+
+
+             Elements links =doc.select("p[class=mb-3]") ;
+
+
+
+
+
+//if (imagenes.size()==0){
+//imagenes = doc.select("div a>img");
+//}
+    //public Element  [More ...] child(int index) {
+
+        // return children().get(index);
+
+
+
+    // }
+
+
+           int conatrimagenes=links.size();
+
+
+//for(Element linko : links) {
+   // System.out.println(linko.elementSiblingIndex() + " " + linko.text());
+//}
+
+
+
+          int conatrlinks=links.size();
+
+
+ // int asubastar=0;
+
+ // if(foo>conatrlinks)
+ // {asubastar=conatrlinks;}
+ // else{
+ // asubastar=foo;
+ // }
+
+
+//conatrlinks=asubastar;
+
+ /// for (fieldnum = 0; fieldnum < conatrlinks; fieldnum++) {
+  for (fieldnum = 0; fieldnum <conatrlinks; fieldnum++) {
+
+     Elements link = links.eq(fieldnum);
+   ///  Element link = links.get(fieldnum);
+    // Element  padres= link.first();
+
+
+    ///   String referencia=link.attr("href");
+   //  if(referencia.length()>3){//http://
+
+      //Elements link = links.eq(fieldnum);
+     //Element  padres= link.parent();
+   //  Elements  imagenesasociadas=link.select("img");
+
+     //       Element imagenasociada=  imagenesasociadas.get(0);
+
+
+    //  Element  padres= link.parent();
+
+
+
+ 	//Document doca=padres.ownerDocument();
+    //   Elements imagenos=doca.select("img");
+ // Elements imagenos=padres.select("img");
+
+
+
+    //  Elements imagen = imagenes.eq(fieldnum);
+        //Elements imagen = imagenos.eq(0);
+    Object[] outputRow = new Object[2];
+       if(link.text().contains("Finaliza:")){
+       outputRow[0]=link.text();
+       outputRow[1]=EntraRow[2];
+       putRow(data.outputRowMeta, outputRow);
+
+           }
+     // outputRow[0]=padres.outerHtml();
+
+   //// outputRow[0]=referencia;
+
+   ///  String gubelmon=link.outerHtml();
+   ///  Document imagenstring = Jsoup.parse(gubelmon);
+    ///   Elements  imagenesposters=imagenstring.select("img");
+     ///  Elements  enlacesub=imagenstring.select("a");
+   ///    Elements  precios=imagenstring.select("span[class*=precio-lote]");
+
+      
+
+
+       ////Elements  numeropujas=imagenstring.select("span[class*=lote_item-bids]");
+          
+           ///  Elements  tiemposub=imagenstring.select("span[class*=reloj]");
+
+             ///   Elements  loteidens=imagenstring.select("a[data-id-lote]");
+
+
+
+
+        ///  if((imagenesposters.size())>=1){
+           ///  Elements imagenesposter=imagenesposters.eq(0);
+         //     Elements precio=precios.eq(0);
+        //     Elements enlasu=enlacesub.eq(0);
+         //     Elements numeropu=numeropujas.eq(0);
+         //     Elements tiempoac=tiemposub.eq(0);
+          //    Elements loteiden=loteidens.eq(0);
+
+            //  outputRow[1]=imagenesposter.text();
+           //   outputRow[2]=imagenesposter.attr("title");
+          //    outputRow[3]=precio.text();
+           //   outputRow[4]="https://www.todocoleccion.net"+enlasu.attr("href");
+        ///     outputRow[5]=numeropu.text();
+           //  outputRow[6]=tiempoac.text();
+          //   outputRow[7]=loteiden.attr("data-id-lote");
+            // outputRow[8]="https://www.todocoleccion.net/mitc/mis_seguimientos/seguir?L="+loteiden.attr("data-id-lote")+"&emk";
+              //// }
+  ////   outputRow[0]=link.outerHtml();
+    /// outputRow[1]=imagenesposter.attr("src");
+
+
+
+    //   outputRow[0]=link.attr("abs:href");
+    //   outputRow[1]=imagen.attr("abs:src");
+   // outputRow[1]=padres.outerHtml();
+    
+
+}
+     // }
+  
+
+
+
+
+
+
+
+ 
+      //  for (Element link : links) {
+        // link.attr("abs:href");
+        //}
+
+
+   // putRow(data.outputRowMeta, r);  
+
+
+///if(==fieldnum){
+
+  ///if (r == null) {
+
+ // setOutputDone();
+//}
+  return true;
+}]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>fechafinal</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>enlacesg</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>Y</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>817</xloc>
+      <yloc>262</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>scraperimagentitulo</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+static long rownum = 0;
+static RowMetaInterface inputRowMeta;
+static long numFields;
+static String[] fieldNames;
+//
+
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+  // get the current row
+  Object[] r = getRow();
+
+  // If the row object is null, we are done processing.
+  if (r == null) {
+   // setOutputDone();
+    return false;
+  }
+
+  // If this is the first row, cache some metadata.
+  // We will reuse this metadata in processing the rest of the rows.
+  if (first) {
+    inputRowMeta = getInputRowMeta();
+    fieldNames = inputRowMeta.getFieldNames();
+    numFields = fieldNames.length; 
+  }
+    Object[] EntraRow = new Object[3];
+  // Generate a new id number for the current row.
+    EntraRow[0] = inputRowMeta.getString(r,0);
+    EntraRow[1] = inputRowMeta.getString(r, 1);
+     EntraRow[2] = inputRowMeta.getString(r, 2);
+      Document doc = Jsoup.parse((String)EntraRow[1]);
+  int fieldnum;
+
+
+int foo = Integer.parseInt((String)EntraRow[2]);
+
+
+      //  Elements imagenes = doc.select("a[href],img[src]");
+
+     //   Elements links = doc.select("a[href],img[src]");
+
+      /// Elements links = doc.select("div:has(img)> a");
+       Elements imagenes = doc.select("div:has(a)> img");
+
+
+             Elements links =doc.select("div[class=_lote_item]") ;
+
+
+
+
+
+//if (imagenes.size()==0){
+//imagenes = doc.select("div a>img");
+//}
+    //public Element  [More ...] child(int index) {
+
+        // return children().get(index);
+
+
+
+    // }
+
+
+           int conatrimagenes=links.size();
+
+
+//for(Element linko : links) {
+   // System.out.println(linko.elementSiblingIndex() + " " + linko.text());
+//}
+
+
+
+          int conatrlinks=links.size();
+
+
+int asubastar=0;
+
+if(foo>conatrlinks)
+{asubastar=conatrlinks;}
+else{
+asubastar=foo;
+}
+
+
+conatrlinks=asubastar;
+
+ /// for (fieldnum = 0; fieldnum < conatrlinks; fieldnum++) {
+  for (fieldnum = 0; fieldnum <conatrlinks; fieldnum++) {
+
+     Elements link = links.eq(fieldnum);
+
+   ///  Element link = links.get(fieldnum);
+    // Element  padres= link.first();
+
+
+    ///   String referencia=link.attr("href");
+   //  if(referencia.length()>3){//http://
+
+      //Elements link = links.eq(fieldnum);
+     //Element  padres= link.parent();
+   //  Elements  imagenesasociadas=link.select("img");
+
+     //       Element imagenasociada=  imagenesasociadas.get(0);
+
+
+    //  Element  padres= link.parent();
+
+
+
+ 	//Document doca=padres.ownerDocument();
+    //   Elements imagenos=doca.select("img");
+ // Elements imagenos=padres.select("img");
+
+
+
+    //  Elements imagen = imagenes.eq(fieldnum);
+        //Elements imagen = imagenos.eq(0);
+    Object[] outputRow = new Object[9];
+     // outputRow[0]=padres.outerHtml();
+
+   //// outputRow[0]=referencia;
+
+     String gubelmon=link.outerHtml();
+     Document imagenstring = Jsoup.parse(gubelmon);
+       Elements  imagenesposters=imagenstring.select("img");
+       Elements  enlacesub=imagenstring.select("a");
+       Elements  precios=imagenstring.select("span[class*=precio-lote]");
+
+      
+
+
+       Elements  numeropujas=imagenstring.select("span[class*=lote_item-bids]");
+          
+             Elements  tiemposub=imagenstring.select("span[class*=reloj]");
+
+                Elements  loteidens=imagenstring.select("a[data-id-lote]");
+
+
+
+
+          if((imagenesposters.size())>=1){
+             Elements imagenesposter=imagenesposters.eq(0);
+             Elements precio=precios.eq(0);
+             Elements enlasu=enlacesub.eq(0);
+             Elements numeropu=numeropujas.eq(0);
+             Elements tiempoac=tiemposub.eq(0);
+             Elements loteiden=loteidens.eq(0);
+
+             outputRow[1]=imagenesposter.attr("src");
+             outputRow[2]=imagenesposter.attr("title");
+             outputRow[3]=precio.text();
+             outputRow[4]="https://www.todocoleccion.net"+enlasu.attr("href");
+             outputRow[5]=numeropu.text();
+             outputRow[6]=tiempoac.text();
+             outputRow[7]=loteiden.attr("data-id-lote");
+             outputRow[8]="https://www.todocoleccion.net/mitc/mis_seguimientos/seguir?L="+loteiden.attr("data-id-lote")+"&emk";
+               }
+     outputRow[0]=link.outerHtml();
+    /// outputRow[1]=imagenesposter.attr("src");
+
+
+
+    //   outputRow[0]=link.attr("abs:href");
+    //   outputRow[1]=imagen.attr("abs:src");
+   // outputRow[1]=padres.outerHtml();
+    putRow(data.outputRowMeta, outputRow);
+
+}
+     // }
+  
+
+
+
+
+
+
+
+ 
+      //  for (Element link : links) {
+        // link.attr("abs:href");
+        //}
+
+
+   // putRow(data.outputRowMeta, r);  
+
+
+if(conatrlinks==fieldnum){
+  setOutputDone();
+}
+  return true;
+}]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>sabastasdetodo</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>urlimagen</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>titulo</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>precio</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>enlacesub</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>numeropujas</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>tiempodepuja</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>identiflote</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+        <field>
+        <field_name>enlacesegui</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>Y</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>508</xloc>
+      <yloc>225</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
